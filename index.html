@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Countdown Timer</title>
+  <link href="styl.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Countdown Timer</h1>
+    <input type="number" id="start-number" placeholder="Enter starting number" />
+    <div id="countdown-display">Countdown not started</div>
+    <div class="buttons">
+      <button id="start-btn">Start</button>
+      <button id="pause-btn" disabled>Pause</button>
+      <button id="resume-btn" disabled>Resume</button>
+      <button id="stop-btn" disabled>Stop</button>
+    </div>
+  </div>
+
+  <script src="countdown.js"></script>
+</body>
+</html>

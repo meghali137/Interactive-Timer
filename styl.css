@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+}
+
+/* Heading style */
+.container h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Input field styling */
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  outline: none;
+  transition: border-color 0.4s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+/* Countdown display */
+#countdown-display {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+  padding: 25px;
+  background-color: #f3f3f3;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#countdown-display.active {
+  background-color: #d3e4f1;
+  border-color: #007bff;
+}
+
+/* Button styles */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Button colors for Pause, Resume, Stop */
+#pause-btn, #resume-btn, #stop-btn {
+  background-color: #f44336;
+}
+
+#pause-btn:hover, #resume-btn:hover, #stop-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .container {
+      max-width: 100%;
+  }
+
+  #countdown-display {
+      font-size: 32px;
+      padding: 15px;
+  }
+
+  button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
